@@ -24,7 +24,7 @@
     if (isset($_POST['backBut'])) {
         
         $proID = $_POST['saveID'];
-        $url = "showProblems.php?proID=".$proID;
+        $url = "showproblems.php?proID=".$proID;
         
         header("location: $url");
     }
