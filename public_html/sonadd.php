@@ -1,5 +1,5 @@
 <?php 
-exit;
+
 	include('DBCon.php');
 
 
@@ -52,8 +52,10 @@ exit;
 
     foreach ($accounts as $acc) {
         addNewAccountWithBatch($acc, "abc", $acc, 0, 14);
+        echo $acc;
     }
-    
+
+    exit;
 
 ?>
 <!doctype html>
