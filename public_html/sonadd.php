@@ -1,5 +1,5 @@
-<?php 
-
+<?php
+exit;
 	include('DBCon.php');
 
 
@@ -55,7 +55,7 @@
         echo $acc;
     }
 
-    exit;
+
 
 ?>
 <!doctype html>
