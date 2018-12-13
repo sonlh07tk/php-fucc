@@ -495,12 +495,18 @@
 	// CREATE NEW ACCOUNT
 	function addNewAccount($username, $password, $fullname, $role) {
 		GLOBAL $db;	
-		$proID = getIDPro();
 		$sql = "INSERT INTO account(username, password, role, fullname, solve, point)".
 		"VALUES('$username', '$password', '$role', '$fullname', '0', '0')";	
 		mysqli_query($db, $sql);			
 	}
-	
+
+	function addNewAccountWithBatch($username, $password, $fullname, $role, $batch) {
+        GLOBAL $db;
+        $sql = "INSERT INTO account(username, password, role, fullname, solve, point, batch)".
+            "VALUES('$username', '$password', '$role', '$fullname', '0', '0', $batch)";
+        mysqli_query($db, $sql);
+    }
+
 	// COUNTING
 	function countSubmitUser($username) {
 		GLOBAL $db;

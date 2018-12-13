@@ -1,16 +1,60 @@
 <?php 
 exit;
 	include('DBCon.php');
-	
-	if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+
+
+
+	/*
+	 if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 		if (isset($_GET['username'])) {
 			$username = $_GET['username'];
 			$pass = $_GET['password'];
 			$name = $_GET['name'];;
 			$role = 0; //$_GET['role'];
-addNewAccount($username, $pass, $name, $role);
+            addNewAccount($username, $pass, $name, $role);
 		}
 	}
+	*/
+
+	//add batch account
+    $accounts = array("se140823",
+"se140867",
+"se140827",
+"se140867",
+"se140736",
+"se140125",
+"se141031",
+"se141009",
+"se140830",
+"se140831",
+"se140556",
+"se140954",
+"se140372",
+"se140092",
+"se140205",
+"se140260",
+"se140297",
+"se140868",
+"se140848",
+"se140737",
+"se140910",
+"se140919",
+"se140745",
+"se140286",
+"se140809",
+"se140196",
+"se140956",
+"se140647",
+"se140775",
+"se140832",
+"se141088",
+"se140784");
+
+    foreach ($accounts as $acc) {
+        addNewAccountWithBatch($acc, "abc", $acc, 0, 14);
+    }
+    
+
 ?>
 <!doctype html>
 <html>
