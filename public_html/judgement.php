@@ -12,7 +12,8 @@
     $fill_stt = 0;
     $fill_username = "";
     $fill_problem = 0;
-    
+    $_current_batch = 14;
+
     if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 
 // storage last search
@@ -244,6 +245,9 @@
                         $msg = stateString($stt);
                         $msgID = normSubID($row["subID"]);
                         $pro = getSingleProblem($row["problemID"]);
+
+                        if ($pro['batch'] != $_current_batch) continue;
+
                         ?>
                         
                         <tr>

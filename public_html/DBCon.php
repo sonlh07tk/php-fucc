@@ -461,6 +461,15 @@
 		"VALUES('$proID', '$problem_name', '$problem_cont', '$problem_score', '0', '$user_add')";	
 		mysqli_query($db, $sql);
 	}
+
+	function addNewProblemWithBatch($user_add, $problem_name, $problem_cont, $problem_score, $_batch) {
+    	GLOBAL $db;
+    	$proID = getIDPro();
+    	$sql = "INSERT INTO problems(problemID, problemName, statement, point, solved, author, batch, lim)".
+        	"VALUES('$proID', '$problem_name', '$problem_cont', '$problem_score', '0', '$user_add', '$_batch', 3)";
+    	mysqli_query($db, $sql);
+	}
+
 	// update problems
 	function updateProblem($problem_id, $problem_name, $problem_cont, $problem_score) {
 		GLOBAL $db;	

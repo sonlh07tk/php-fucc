@@ -13,6 +13,8 @@
         if (isset($_GET['txtSearch'])) 
         $txtSearch = $_GET['txtSearch'];
     }
+
+    $_current_batch = 14;
 ?>
 
 <!doctype html>
@@ -180,7 +182,8 @@
                     foreach($rs as $row)
                     {
                         $n_ID = normSubID($row["problemID"]);
-                        
+
+                        if ($row['batch'] != $_current_batch) continue;
                         ?>
                         <tr>    
                             <td> <?php echo $n_ID ?> </td>

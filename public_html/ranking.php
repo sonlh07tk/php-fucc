@@ -93,6 +93,7 @@
                                     <tr>
                                         <th>Rank</th>
                                         <th>Name</th>
+                                        <th>Batch</th>
                                         <th>Class</th>
                                         <th>Solved</th>
                                         <th>Score</th>
@@ -116,7 +117,10 @@
                     <tr <?php if ($row['username'] == $_tmpLogin) {?> style="background-color:#ffff99"<?php } ?> >
                         <td> <?php echo countRank($row['username']) ?> </td>
                         <td> <a href="view.php?user=<?php echo $row['username']?>"> <strong><font color="<?php echo $col ?>"> <?php echo $row["fullname"] ?> </font> </strong> </a>  </td> 
-                        <td> <?php echo getClassName($row['class']) ?></td>
+                        <td><?php echo "K ".$row['batch'] ?> </td>
+                        <td> <?php
+                            echo ""//getClassName($row['class'])
+                            ?></td>
                         <td> <?php echo countSolveProUser($row['username']) ?>  </td>
                         <td> <?php echo $row["point"] ?> </td>
                     </tr>

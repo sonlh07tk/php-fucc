@@ -1,7 +1,9 @@
 <?php
 	include("peanAccount.php");
 	include ("DBCon.php");
-	
+
+
+
 	if ($_tmpAdmin == "NO") {
 		echo "Not permission yet.";
 		exit;
@@ -11,10 +13,13 @@
 		$_proName = $_POST['txtProName'];
 		$_proCont = $_POST['ten'];
 		$_proScore = $_POST['txtScore'];
+        $_current_batch = 14;
 		
-		
-		addNewProblem($_tmpLogin, $_proName, $_proCont, $_proScore);
-		header("location: problemset.php");
+		//addNewProblem($_tmpLogin, $_proName, $_proCont, $_proScore);
+        addNewProblemWithBatch($_tmpLogin, $_proName, $_proCont, $_proScore, $_current_batch);
+
+        exit;
+		//header("location: problemset.php");
 		
 	}
 ?>

@@ -11,7 +11,8 @@
     if ($_SERVER['REQUEST_METHOD'] == "GET") {
         if (isset($_GET["proID"])) $proID = $_GET["proID"];
     }
-    
+
+    $_current_batch = 14;
 ?>
 
 <!doctype html>
@@ -92,13 +93,20 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <?php if (checkProblem($proID) == false) { 
-                                    echo "Problem is not exist<br><br>";
+                                <?php
+
+                                if (checkProblem($proID) == false) {
+                                    echo "Problem is not exist.<br><br>";
                                     exit;
-                                    }
+                                }
+
                                     $_data = getSingleProblem($proID);
-    
-                                    ?>
+
+                                if ($_data['batch'] != $_current_batch) {
+                                    echo "Problem is not available.<br><br>";
+                                    exit;
+                                }
+                                ?>
 
                                 <h2 class="title">Problem <?php echo $_data["problemID"]?>: <?php echo $_data["problemName"]?>
                                     

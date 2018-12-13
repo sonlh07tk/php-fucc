@@ -3,7 +3,8 @@
 	include ("DBCon.php");
 	
 	$_proID = 0;
-	
+    $_current_batch = 14;
+
 	if ($_tmpAdmin == "NO") {
 		echo "Not permission yet.";
 		exit;
@@ -15,6 +16,12 @@
 			echo "Problem is not exist";
 			exit;
 		}
+
+		$_probInfo = getSingleProblem($_proID);
+		if ($_probInfo['batch'] != $_current_batch) {
+		    echo "Problem is not available yet.";
+            exit;
+        }
 	}
 	
 	if ($_SERVER['REQUEST_METHOD'] == "POST") {

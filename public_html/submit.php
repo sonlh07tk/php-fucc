@@ -1,5 +1,6 @@
 <?php
-    
+    $_current_batch = 14;
+
     include("peanAccount.php");
     include("DBCon.php");
     
@@ -83,10 +84,8 @@
     if (isset($_POST['saveID'])) $proID = $_POST['saveID'];
     if (isset($_POST['saveName'])) $proName = $_POST['saveName'];
 
-    if (checkProblem($proID) == false) {
-        echo "Problem is not exist";
-        exit;
-    }
+
+
 ?>
 
 <!doctype html>
@@ -165,6 +164,38 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12">
+
+
+                        <?php
+                        if (checkProblem($proID) == false) { ?>
+                        <div class="card">
+                            <div class="content" >
+                                <?php
+                                echo "Problem is not exist";
+                                exit;
+                        ?>
+                            </div>
+                        </div>
+                        <?php
+                        }
+                        ?>
+
+                        <?php
+                        $_data = getSingleProblem($proID);
+                        if ($_data['batch'] != $_current_batch) { ?>
+                            <div class="card">
+                                <div class="content" >
+                                    <?php
+                                    echo "Problem is not allowed to submit";
+                                    exit;
+
+                                    ?>
+                                </div>
+                            </div>
+                            <?php
+                        }
+                        ?>
+
                         <div class="card">
                             <div class="header">
                                 <h4 class="title">Problem <?php echo $proID." - ".$proName ?> </h4>

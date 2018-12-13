@@ -10,6 +10,7 @@
     $fill_stt = 0;
     $fill_username = "";
     $fill_problem = 0;
+    $_current_batch = 14;
 
     if ($_SERVER['REQUEST_METHOD'] == "GET") {
         if (isset($_GET["proID"])) $fill_problem = $_GET["proID"];
@@ -160,6 +161,8 @@
                             $cnt = 0;
                     
                         foreach($rs as $row) {
+
+
                                 $dem++;
                                 $stt = $row["judgeState"];
                         
@@ -167,6 +170,8 @@
                                 $msg = stateString($stt);
                                 $msgID = normSubID($row["subID"]);
                                 $pro = getSingleProblem($row["problemID"]);
+
+                                if ($pro['batch'] != $_current_batch) continue;
                         ?>
                         <?php if ($row["username"] == $_tmpLogin) { ?>
                         <tr>
