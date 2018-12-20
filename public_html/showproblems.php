@@ -136,9 +136,9 @@
                                 </div>
                                 <br>
                                 <div class = "text-justify">
-                                    <font color="green"> Allow submissions remaining: <strong> <?php 
+                                    <p class="bg-warning">  Allow submissions remaining:  <?php
                                     echo max(0, (getLimitSubmit($proID)-countSubmitProUser($_tmpLogin, $proID))) ?>
-                                    </strong></font>
+                                    </p>
                                 </div>
                                 <hr style="height:1px; background-color:gray;">
 
