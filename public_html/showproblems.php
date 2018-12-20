@@ -122,13 +122,12 @@
                                 </h2>
                                 <div class="content" style="text-align: center;">
 
-                                    <a href=""status.php?proID=<?php echo $_data['problemID']?>"" class="btn btn-primary btn-lg active" role="button">Status</a>
+                                    <a href="status.php?proID=<?php echo $_data['problemID']?>" class="btn btn-primary btn-lg active" role="button">Status</a>
 
+                                    <a href="solved.php?proID=<?php echo $_data['problemID']?>" class="btn btn-primary btn-lg active" role="button">Ranking</a>
 
-                                    &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="solved.php?proID=<?php echo $_data['problemID']?>"> Ranking </a>
-                                &nbsp;&nbsp;&nbsp;&nbsp;
-                                <a href="submissions.php?proID=<?php echo $_data['problemID']?>"> My submissions</a>
+                                    <a href="submissions.php?proID=<?php echo $_data['problemID']?>" class="btn btn-primary btn-lg active" role="button">My submission</a>
+
                                 </div>
                             </div>
                             <div class="content">
