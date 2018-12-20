@@ -152,19 +152,7 @@
                                 <strong><h4 style = "text-align: center;" class="title">BADGES</h4></strong>
                             </div>
                             <div class="content">
-                                    <div class="card">
-                                    <img title="K13 C-Course Class" src="img/C_badget.PNG" width="50" height="50" />&nbsp;&nbsp;
-                                    <span> K13 C-Course Class </span>
-                                    <br> <br>
-                                    </div>
 
-                                    <div class="card">
-                                    
-                                    <img title = "Member of Fcode Club" src="assets/img/acc.jpg" width="50" height="50" />
-                                    &nbsp;&nbsp;
-                                    <span>Member of Fcode Club</span>
-                                    <br> <br>
-                                    </div>
                             </div>
                         </div>
                     </div>
