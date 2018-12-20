@@ -104,7 +104,7 @@
                                     <img class="avatar border-white" <?php if ($_userInfo['username'] != 'sonlh') { ?>
                                 src="assets/img/background.jpg"
                                 <?php } else { ?>
-                                src = "assets/img/sonlh.JPG"
+                                src = "assets/img/acc.jpg"
                                 <?php } ?> alt="..."/>
                                     <h4 class="title"><?php echo $_userInfo['fullname'] ?><br/>
                                         <a href="status.php?user=<?php echo $_userInfo['username']?>">
