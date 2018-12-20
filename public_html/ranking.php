@@ -123,7 +123,7 @@ $_current_bacth = 14;
                     $col = judge($row["point"]);
                     ?>
                     <tr <?php if ($row['username'] == $_tmpLogin) {?> style="background-color:#ffff99"<?php } ?> >
-                        <td> <?php echo countRank($row['username']) ?> </td>
+                        <td> <?php echo countRankWithBatch($row['username'], $_current_bacth) ?> </td>
                         <td> <a href="view.php?user=<?php echo $row['username']?>"> <strong><font color="<?php echo $col ?>"> <?php echo $row["fullname"] ?> </font> </strong> </a>  </td> 
                         <td><?php echo "K ".$row['batch'] ?> </td>
                         <td> <?php
