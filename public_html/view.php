@@ -102,7 +102,7 @@
                             <div class="content">
                                 <div class="author">
                                     <img class="avatar border-white" <?php if ($_userInfo['username'] != 'sonlh') { ?>
-                                src="assets/img/background.jpg"
+                                src="assets/img/acc.jpg"
                                 <?php } else { ?>
                                 src = "assets/img/acc.jpg"
                                 <?php } ?> alt="..."/>
