@@ -1,8 +1,14 @@
-<?php include("peanAccount.php"); ?>
+<?php 
+
+
+include("peanAccount.php");
+$_current_bacth = 14;
+?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
     <title>Train C PROBLEMSET</title>
 
@@ -109,6 +115,8 @@
                 $cnt = 0;
                 foreach($rs as $row)
                  {
+                     if ($row['batch'] != $_current_bacth) continue;
+
                     if ($row['point'] < $lastPoint) $cnt++;
                     $lastPoint = $row['point'];
                     
