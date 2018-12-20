@@ -557,5 +557,15 @@
 		if (isset($rs)) 
 			return mysqli_num_rows($rs) + 1;
 	}
+
+	function countRankWithBatch($username, $_batch)
+    {
+        $myscore = getScore($username);
+        GLOBAL $db;
+        $sql = "SELECT * FROM account WHERE point > '$myscore'  and batch = '$_batch'";
+        $rs = mysqli_query($db, $sql);
+        if (isset($rs))
+            return mysqli_num_rows($rs) + 1;
+    }
 ?>
 
