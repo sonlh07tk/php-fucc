@@ -256,7 +256,7 @@
                             <td> <a href="showcode.php?id=<?php echo $row["subID"]?>">source</a></td>
                             <td> <?php echo $row["timeSub"] ?> </td>
                             <td> <strong> <font color="<?php echo judge(getPoints($row['username'])) ?>"> <?php echo getFullName($row["username"])." (".$row["username"].")"; ?> </font> </strong> </td>
-                            <td> <a href="showProblems.php?proID=<?php echo $row['problemID']?>" > <?php echo $pro["problemName"] ?> </a> </td>
+                            <td> <a href="showproblems.php?proID=<?php echo $row['problemID']?>" > <?php echo $pro["problemName"] ?> </a> </td>
                             <td> <?php echo strtoupper($row["lang"]) ?> </td>
                             <td> 
                                 <?php if ($stt == 1) { ?> <span class="label label-default">Waiting</span> <?php } ?>
