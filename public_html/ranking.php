@@ -97,7 +97,7 @@ $_current_bacth = 14;
 
                                     <thead>
                                     <tr>
-                                        <th> <font color="red"> Rank </font></th>
+                                        <th>  Rank </font></th>
                                         <th>Name</th>
                                         <th>Batch</th>
                                         <th>Class</th>
